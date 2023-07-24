@@ -189,7 +189,6 @@ public class DataTypes {
     System.out.println("=====================================\n");
   }
 
-  // TODO: add StringBuilder and StringBuffer
   public static void stringBuilderDataClass() {
     StringBuilder sb = new StringBuilder("Hello World!");
     System.out.println("StringBuilder Datatype:");
@@ -315,4 +314,5 @@ public class DataTypes {
     stringBufferDataClass();
     stringBuilderDataClass();
   }
+  // TODO: Casting and Type Conversion
 }
