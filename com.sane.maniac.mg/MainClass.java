@@ -33,5 +33,6 @@ public class MainClass {
         Operands.assignmentOperators();
         Operands.incrementAndDecrementOperators();
         Operands.ternaryOperators();
+        Operands.bitwiseAndBitShiftOperators();
     }
 }
