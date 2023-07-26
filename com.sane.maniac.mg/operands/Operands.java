@@ -74,7 +74,6 @@ public abstract class Operands {
         System.out.println("================================\n");
     }
 
-    // TODO: look into Bitwise and Bit Shift Operators
     public static void bitwiseAndBitShiftOperators() {
         System.out.println("Bitwise and Bit Shift Operators:");
         int a = 10;
@@ -90,8 +89,5 @@ public abstract class Operands {
         System.out.println("Unsigned Right Shift (>>>):\t" + (a >>> 2));
         System.out.println("================================\n");
     }
-    // TODO: look into assignment operators in more detail
-    // TODO: look into instanceof operator
-    // TODO: look into decrement and increment operators in more detail
-    // TODO: look into ternary operators in more detail
+
 }

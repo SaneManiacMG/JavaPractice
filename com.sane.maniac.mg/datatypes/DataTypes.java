@@ -316,4 +316,19 @@ public abstract class DataTypes {
     stringBufferDataClass();
     stringBuilderDataClass();
   }
+
+  public static void dataInference() {
+    System.out.println("Data Inference:");
+    var i = 10;
+    var j = 20.5;
+    var k = i + j;
+    var str = "Hello World!";
+    var strAndNumber = str + k;
+    System.out.println("i = " + i);
+    System.out.println("j = " + j);
+    System.out.println("k = " + k);
+    System.out.println("str = " + str);
+    System.out.println("strAndNumber = " + strAndNumber);
+    System.out.println("=====================================\n");
+  }
 }

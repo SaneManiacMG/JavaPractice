@@ -6,14 +6,19 @@ import com.sane.maniac.mg.typeconversions.CastingAndTypeConversion;
 
 public class MainClass {
     public static void main(String[] args) {
-        
-        callOperatorsMethods();
+        DataTypes.dataInference();
+
+        // TODO: look into instanceof operator, should consider moving to future Classes and Objects section
+        // TODO: look into decrement and increment operators in more detail
+        // TODO: look into ternary operators in more detail
+        // TODO: look into bitwise and bit shift operators in more detail
     }
 
     public static void callDataTypeMethods() {
         DataTypes.primitiveDataTypes();
         DataTypes.stringDataType();
         DataTypes.stringBufferAndStringBuilder();
+        DataTypes.dataInference();
     }
     
     public static void callCastingMethods() {
