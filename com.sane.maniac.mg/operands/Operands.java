@@ -90,4 +90,13 @@ public abstract class Operands {
         System.out.println("================================\n");
     }
 
+    public static void callEachMethod() {
+        arithmeticOperators();
+        relationalOperators();
+        logicalOperators();
+        assignmentOperators();
+        incrementAndDecrementOperators();
+        ternaryOperators();
+        bitwiseAndBitShiftOperators();
+    }
 }

@@ -1,17 +1,7 @@
 package com.sane.maniac.mg.datatypes;
 
 public abstract class DataTypes {
-
-  // public static void main(String[] args) {
-  //   // Primitive data types
-  //   primitiveDataTypes();
-
-  //   stringDataType();
-
-  //   stringBufferAndStringBuilder();
-  // }
-
-  public static void byteDataType(byte b) {
+ public static void byteDataType(byte b) {
     byte min = -128;
     byte max = 127;
     byte val = b;
@@ -330,5 +320,12 @@ public abstract class DataTypes {
     System.out.println("str = " + str);
     System.out.println("strAndNumber = " + strAndNumber);
     System.out.println("=====================================\n");
+  }
+
+  public static void callEachMethod() {
+    primitiveDataTypes();
+    stringDataType();
+    stringBufferAndStringBuilder();
+    dataInference();
   }
 }

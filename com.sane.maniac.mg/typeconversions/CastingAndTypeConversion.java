@@ -1,17 +1,6 @@
 package com.sane.maniac.mg.typeconversions;
 
 public abstract class CastingAndTypeConversion {
-
-  // public static void main(String[] args) {
-  //   wideningConversion();
-  //   narrowingConversion();
-  //   numericPromotion();
-  //   stringConversion();
-  //   stringToNumberConversion();
-  //   explicitTypeCasting();
-  //   dataTypeParsing();
-  // }
-
   public static void wideningConversion() {
     System.out.println("Widening Conversion:");
     int i = 100;
@@ -97,5 +86,15 @@ public abstract class CastingAndTypeConversion {
     System.out.println("Int value\t" + i);
     System.out.println("Double value\t" + d);
     System.out.println("================================\n");
+  }
+
+  public static void callEachMethod() {
+    wideningConversion();
+    narrowingConversion();
+    numericPromotion();
+    stringConversion();
+    stringToNumberConversion();
+    explicitTypeCasting();
+    dataTypeParsing();
   }
 }
