@@ -67,6 +67,7 @@ public abstract class Operands {
 
     public static void ternaryOperators() {
         System.out.println("Ternary Operators:");
+        System.out.println("Syntax: [condition] ? [if true] : [if false]");
         int a = 10;
         int b = 20;
         System.out.printf("A = %d, B = %d\n", a, b);
