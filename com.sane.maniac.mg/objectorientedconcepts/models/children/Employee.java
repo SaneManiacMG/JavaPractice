@@ -35,4 +35,15 @@ public class Employee extends User {
                 ", designation='" + designation + '\'' +
                 "} " + super.toString();
     }
+
+    @Override
+    public void updateUser(User userDetails) {
+        super.updateUser(userDetails);
+
+        if (userDetails instanceof Employee) {
+            Employee employeeDetails = (Employee)userDetails;
+            this.setDesignation(employeeDetails.getDesignation());
+            this.setEmployeeId(employeeDetails.getEmployeeId());
+        }
+    }
 }

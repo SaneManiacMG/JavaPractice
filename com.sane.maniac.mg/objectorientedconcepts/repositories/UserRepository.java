@@ -72,18 +72,12 @@ public class UserRepository implements IUserRepository {
     }
 
     public Customer updateCustomer(Customer customer) {
-        Iterator<Customer> iterator = customers.iterator();
-        while (iterator.hasNext()) {
-            Customer updatedCustomer = iterator.next();
+        for (int i = 0; i < customers.size(); i++) {
+            Customer updatedCustomer = customers.get(i);
             if (updatedCustomer.getId() == customer.getId()) {
-                updatedCustomer.setName(customer.getName());
-                updatedCustomer.setEmail(customer.getEmail());
-                updatedCustomer.setPassword(customer.getPassword());
-                updatedCustomer.setPhoneNumber(customer.getPhoneNumber());
-                updatedCustomer.setCustomerId(customer.getCustomerId());
-                updatedCustomer.setAddress(customer.getAddress());
+                customers.set(i, customer);
                 System.out.println("Customer updated successfully");
-                return updatedCustomer;
+                return customer;
             }
         }
         System.out.println("Customer not found");
@@ -91,18 +85,12 @@ public class UserRepository implements IUserRepository {
     }
 
     public Employee updateEmployee(Employee employee) {
-        Iterator iterator = employees.iterator();
-        while (iterator.hasNext()) {
-            Employee updatedEmployee = (Employee) iterator.next();
+        for (int i = 0; i < employees.size(); i++) {
+            Employee updatedEmployee = employees.get(i);
             if (updatedEmployee.getId() == employee.getId()) {
-                updatedEmployee.setName(employee.getName());
-                updatedEmployee.setEmail(employee.getEmail());
-                updatedEmployee.setPassword(employee.getPassword());
-                updatedEmployee.setPhoneNumber(employee.getPhoneNumber());
-                updatedEmployee.setEmployeeId(employee.getEmployeeId());
-                updatedEmployee.setDesignation(employee.getDesignation());
+                employees.set(i, employee);
                 System.out.println("Employee updated successfully");
-                return updatedEmployee;
+                return employee;
             }
         }
         System.out.println("Employee not found");
@@ -158,6 +146,3 @@ public class UserRepository implements IUserRepository {
     }
 
 }
-
-// q: should I use an iterator or a for loop when updating an object in a list?
-// a: use an iterator when updating an object in a list

@@ -70,4 +70,12 @@ public class User {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
+
+    public void updateUser(User userDetails) {
+        setId(userDetails.getId());
+        setName(userDetails.getName());
+        setEmail(userDetails.getEmail());
+        setPassword(userDetails.getPassword());
+        setPhoneNumber(userDetails.getPhoneNumber());
+    }
 }

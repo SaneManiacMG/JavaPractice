@@ -37,4 +37,15 @@ public class Customer extends User {
                 ", address='" + address + '\'' +
                 "} " + super.toString();
     }
+
+    @Override
+    public void updateUser(User userDetails) {
+        super.updateUser(userDetails);
+
+        if (userDetails instanceof Customer) {
+            Customer customerDetails = (Customer)userDetails;
+            this.setAddress(customerDetails.getAddress());
+            this.setCustomerId(customerDetails.getCustomerId());
+        }
+    }
 }

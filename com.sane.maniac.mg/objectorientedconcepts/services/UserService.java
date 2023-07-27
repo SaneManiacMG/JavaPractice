@@ -70,7 +70,27 @@ public class UserService implements IUserService {
     @Override
     public void updateUser() {
         User user = getUserInfo();
-        userRepository.updateUser(user);
+        Object foundUser = userRepository.getUser(user.getId());
+
+        if (foundUser == null) {
+            System.out.println("User not found");
+            return;
+        }
+
+        if (foundUser instanceof Employee) {
+            System.out.print("Enter employee number:\t");
+            ((Employee) foundUser).setEmployeeId(scanner.nextInt());
+            System.out.print("Enter designation:\t");
+            ((Employee) foundUser).setDesignation(scanner.next());
+            ((Employee) foundUser).updateUser(user);
+        } else if (foundUser instanceof Customer) {
+            System.out.print("Enter customer id:\t");
+            ((Customer) foundUser).setCustomerId(scanner.nextInt());
+            System.out.print("Enter address:\t");
+            ((Customer) foundUser).setAddress(scanner.next());
+            ((Customer) foundUser).updateUser(user);
+        }
+        userRepository.updateUser(foundUser);
     }
 
     @Override
