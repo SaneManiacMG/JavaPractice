@@ -7,5 +7,6 @@ public class MainClass {
         ParentClass.startProcess();
 
         // TODO: Unit tests, I need that
+        // TODO: Play with default methods sometime
     }
 }

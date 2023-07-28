@@ -3,8 +3,8 @@ package com.sane.maniac.mg.objectorientedconcepts.models.children;
 import com.sane.maniac.mg.objectorientedconcepts.models.parents.User;
 
 public class Employee extends User {
-    int employeeId;
-    String designation;
+    private int employeeId;
+    private String designation;
 
     public Employee(int id, String name, String email, String password, String phoneNumber, int employeeId, String designation) {
         super(id, name, email, password, phoneNumber);

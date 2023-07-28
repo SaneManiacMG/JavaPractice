@@ -17,18 +17,20 @@ public class ParentClass {
         ParentClass parentClass = new ParentClass(new UserService(new UserRepository())) {
         };
         while (true) {
+            System.out.println("\n");
             parentClass.selectOptions();
-            System.out.println("\n\n");
+            System.out.println("\n");
         }
     }
 
     public void selectOptions() {
         int option = showOptions();
         if (option == 1) {
-            System.out.println("1. Add Employee");
+            System.out.println("\n1. Add Employee");
             System.out.println("2. Add Customer");
             System.out.print("Enter option:\t");
             int option2 = new Scanner(System.in).nextInt();
+
             if (option2 == 1) {
                 userService.addEmployee();
             } else if (option2 == 2) {
@@ -56,7 +58,7 @@ public class ParentClass {
     }
 
     public static int showOptions() {
-        System.out.println("Select an option:");
+        System.out.println("\nSelect an option:");
         System.out.println("1. Add User");
         System.out.println("2. Update User");
         System.out.println("3. Delete User");
