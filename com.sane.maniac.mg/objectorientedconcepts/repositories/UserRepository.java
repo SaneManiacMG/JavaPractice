@@ -5,7 +5,6 @@ import com.sane.maniac.mg.objectorientedconcepts.models.children.Customer;
 import com.sane.maniac.mg.objectorientedconcepts.models.children.Employee;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class UserRepository implements IUserRepository {
@@ -30,8 +29,8 @@ public class UserRepository implements IUserRepository {
     @Override
     public Object getUser(int id) {
         System.out.printf("Searching for user with id %d\n", id);
+
         for (Employee employee : employees) {
-            System.out.printf("Employee id: %d\n", employee.getId());
             if (employee.getId() == id) {
                 System.out.printf("Employee found: %s\n", employee);
                 return employee;
@@ -39,7 +38,6 @@ public class UserRepository implements IUserRepository {
         }
 
         for (Customer customer : customers) {
-            System.out.printf("Customer id: %d\n", customer.getId());
             if (customer.getId() == id) {
                 System.out.printf("Customer found: %s\n", customer);
                 return customer;
