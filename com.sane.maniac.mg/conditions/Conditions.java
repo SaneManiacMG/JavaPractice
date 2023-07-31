@@ -1,6 +1,10 @@
 package com.sane.maniac.mg.conditions;
 
 public class Conditions {
+    public static void main(String[] args) {
+        callAllMethods();
+    }
+
     public static void ifElse() {
         System.out.println("If-Else:");
         System.out.println("if ([condition]) {\n\t[statements]\n} else {\n\t[statements]\n}");

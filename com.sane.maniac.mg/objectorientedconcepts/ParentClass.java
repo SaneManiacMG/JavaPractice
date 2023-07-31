@@ -7,6 +7,10 @@ import com.sane.maniac.mg.objectorientedconcepts.services.UserService;
 import java.util.Scanner;
 
 public class ParentClass {
+    public static void main(String[] args) {
+        startProcess();
+    }
+
     IUserService userService;
 
     public ParentClass(IUserService userService) {

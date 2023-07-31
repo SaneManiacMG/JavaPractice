@@ -1,6 +1,10 @@
 package com.sane.maniac.mg.operands;
 
 public abstract class Operands {
+    public static void main(String[] args) {
+        callEachMethod();
+    }
+
     public static void arithmeticOperators() {
         System.out.println("Arithmetic Operators:");
         int a = 10;

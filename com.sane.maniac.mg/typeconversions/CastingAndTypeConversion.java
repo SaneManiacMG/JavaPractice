@@ -1,6 +1,10 @@
 package com.sane.maniac.mg.typeconversions;
 
 public abstract class CastingAndTypeConversion {
+  public static void main(String[] args) {
+    callEachMethod();
+  }
+
   public static void wideningConversion() {
     System.out.println("Widening Conversion:");
     int i = 100;

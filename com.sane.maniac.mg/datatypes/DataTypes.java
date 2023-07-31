@@ -1,6 +1,10 @@
 package com.sane.maniac.mg.datatypes;
 
 public abstract class DataTypes {
+  public static void main(String[] args) {
+    callEachMethod();
+  }
+
  public static void byteDataType(byte b) {
     byte min = -128;
     byte max = 127;

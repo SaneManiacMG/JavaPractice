@@ -1,6 +1,9 @@
 package com.sane.maniac.mg.loops;
 
 public abstract class Loops {
+    public static void main(String[] args) {
+        callEachLoop();
+    }
 
     public static void forLoop() {
         System.out.println("For Loop:");
