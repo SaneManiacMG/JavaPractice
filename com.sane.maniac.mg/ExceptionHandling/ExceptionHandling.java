@@ -11,20 +11,12 @@ public class ExceptionHandling {
 
     public static void main(String[] args) throws IOException {
         ExceptionHandling eh = new ExceptionHandling();
-        int decision = 0;
+        int decision;
         decision = eh.pickFruit();
-        eh.tryWithMultipleExceptionWithSameType(decision);
+        eh.tryWithMultipleExceptionWithSameType();
         eh.tryWithMultipleCatchAndFinally(decision);
         eh.tryWithResources();
-        try {
-            eh.throwsException();
-            System.out.println("Only printed if nothing goes wrong");
-        } catch (IOException e) {
-            System.out.println("IOException caught in main method " + e.getMessage());
-        } catch (Exception e) {
-            System.out.println("Exception caught in main method " + e.getMessage());
-        }
-
+        eh.throwsException();
     }
 
     public void tryWithMultipleCatchAndFinally(int index) {
@@ -52,7 +44,7 @@ public class ExceptionHandling {
         }
     }
 
-    public void tryWithMultipleExceptionWithSameType(int index) {
+    public void tryWithMultipleExceptionWithSameType() {
         try {
             System.out.println("You picked " + fruits[pickFruit() - 1]);
         } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
@@ -78,13 +70,19 @@ public class ExceptionHandling {
         }
     }
 
-    public void throwsException() throws IOException {
-        BufferedReader br = new BufferedReader(
-                new FileReader("C:\\Users\\Mapap\\OneDrive\\Desktop\\test.txt"));
-        String line;
-        while ((line = br.readLine()) != null) {
-            System.out.println(line);
+    public void throwsException() throws CustomException {
+        try {
+            BufferedReader br = new BufferedReader(
+                    new FileReader("C:\\Users\\Mapap\\OneDrive\\Desktop\\test.txt"));
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+            br.close();
+        } catch (IOException e) {
+            throw new CustomException("Something went wrong", e);
         }
-        br.close();
+
     }
 }
+
