@@ -3,6 +3,7 @@ package com.sane.maniac.mg.objectorientedconcepts.repositories;
 import com.sane.maniac.mg.objectorientedconcepts.interfaces.IUserRepository;
 import com.sane.maniac.mg.objectorientedconcepts.models.children.Customer;
 import com.sane.maniac.mg.objectorientedconcepts.models.children.Employee;
+import com.sane.maniac.mg.objectorientedconcepts.models.parents.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,18 +13,19 @@ public class UserRepository implements IUserRepository {
     List<Customer> customers = new ArrayList<>();
 
     @Override
-    public Employee addUser(Employee employee) {
-        employees.add(employee);
-        System.out.println("Employee added successfully");
-        System.out.println(employees);
-        return employee;
-    }
-
-    @Override
-    public Customer addUser(Customer customer) {
-        customers.add(customer);
-        System.out.println("Customer added successfully");
-        return customer;
+    public <T extends User> T addUser(T user) {
+        if (user instanceof Employee) {
+            employees.add((Employee) user);
+            System.out.println("Employee added successfully");
+            return user;
+        } else if (user instanceof Customer) {
+            customers.add((Customer) user);
+            System.out.println("Customer added successfully");
+            return user;
+        } else {
+            System.out.println("User not found");
+            return null;
+        }
     }
 
     @Override
