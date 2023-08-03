@@ -1,6 +1,6 @@
 package com.sane.maniac.mg.genericsandcollections;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Generics<T> {
@@ -17,6 +17,7 @@ public class Generics<T> {
     public static void main(String[] args) {
         setGenerics();
         genericMethods();
+        callWildcardMethods();
     }
 
     public static void setGenerics() {
@@ -52,5 +53,30 @@ public class Generics<T> {
             return null;
         }
         return array[array.length - 1];
+    }
+
+    public static void unboundedWildcard(List<?> list) {
+        for (Object o : list) {
+            System.out.println(o);
+        }
+    }
+
+    public static void upperBoundedWildcard(List<? extends Number> list) {
+        for (Number n : list) {
+            System.out.println(n);
+        }
+    }
+
+    public static void lowerBoundedWildcard(List<? super Integer> list) {
+        for (Object o : list) {
+            System.out.println(o);
+        }
+    }
+
+    public static void callWildcardMethods() {
+        List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5);
+        unboundedWildcard(integerList);
+        upperBoundedWildcard(integerList);
+        lowerBoundedWildcard(integerList);
     }
 }
