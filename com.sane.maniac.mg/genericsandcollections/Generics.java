@@ -56,18 +56,27 @@ public class Generics<T> {
     }
 
     public static void unboundedWildcard(List<?> list) {
+        System.out.println("Unbounded Wildcard");
+        System.out.println("No given type, can be any type");
+        System.out.println("<?>");
         for (Object o : list) {
             System.out.println(o);
         }
     }
 
     public static void upperBoundedWildcard(List<? extends Number> list) {
+        System.out.println("Upper Bounded Wildcard");
+        System.out.println("Given type must be a subclass of Number");
+        System.out.println("<? extends Number>");
         for (Number n : list) {
             System.out.println(n);
         }
     }
 
     public static void lowerBoundedWildcard(List<? super Integer> list) {
+        System.out.println("Lower Bounded Wildcard");
+        System.out.println("Given type must be a superclass of Integer");
+        System.out.println("<? super Integer>");
         for (Object o : list) {
             System.out.println(o);
         }
