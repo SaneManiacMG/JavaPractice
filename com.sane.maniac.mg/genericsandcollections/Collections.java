@@ -1,6 +1,5 @@
 package com.sane.maniac.mg.genericsandcollections;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,17 +31,13 @@ public class Collections {
         names.add("Jack");
         names.add("Jill");
 
-        System.out.println("List:\t\t\t\t\t" + names);
+        System.out.println("Adding Element: (names.add(\"John\"" + names.add("Joemama"));
+        System.out.println("Accessing Elelment: (names.get(0))\t" + names.get(0));
+        System.out.println("Updating Element: (names.set(0, \"Joemama\"))\t" + names.set(0, "Joemama"));
+        System.out.println("Removing Element: (names.remove(0))\t" + names.remove(0));
         System.out.println("List Size: (names.size())\t" + names.size());
-        System.out.println("List Element: (names.get(0))\t" + names.get(0));
         System.out.println("List Contains: (names.contains(\"Jack\"))\t" + names.contains("Jack"));
         System.out.println("List Index: (names.indexOf(\"Jack\"))\t" + names.indexOf("Jack"));
-        System.out.println("List Remove: (names.remove(\"Jack\"))\t" + names.remove("Jack"));
-        System.out.println("List:\t\t\t\t\t" + names);
-        System.out.println("List Remove: (names.remove(0))\t" + names.remove(0));
-        System.out.println("List:\t\t\t\t\t" + names);
-        System.out.println("List set: (names.set(0, \"Jack\"))\t" + names.set(0, "Joemama"));
-        System.out.println("List:\t\t\t\t\t" + names);
         System.out.println();
     }
 }
