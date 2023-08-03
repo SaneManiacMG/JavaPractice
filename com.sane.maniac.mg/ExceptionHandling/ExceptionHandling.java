@@ -2,19 +2,29 @@ package com.sane.maniac.mg.ExceptionHandling;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExceptionHandling {
     String[] fruits = {"Apple", "Banana", "Orange", "Mango"};
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ExceptionHandling eh = new ExceptionHandling();
         int decision = 0;
         decision = eh.pickFruit();
         eh.tryWithMultipleExceptionWithSameType(decision);
         eh.tryWithMultipleCatchAndFinally(decision);
         eh.tryWithResources();
+        try {
+            eh.throwsException();
+            System.out.println("Only printed if nothing goes wrong");
+        } catch (IOException e) {
+            System.out.println("IOException caught in main method " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Exception caught in main method " + e.getMessage());
+        }
+
     }
 
     public void tryWithMultipleCatchAndFinally(int index) {
@@ -66,5 +76,15 @@ public class ExceptionHandling {
             System.out.println("Invalid input");
             return pickFruit();
         }
+    }
+
+    public void throwsException() throws IOException {
+        BufferedReader br = new BufferedReader(
+                new FileReader("C:\\Users\\Mapap\\OneDrive\\Desktop\\test.txt"));
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+        br.close();
     }
 }
