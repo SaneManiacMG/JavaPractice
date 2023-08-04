@@ -9,6 +9,7 @@ public class Collections {
         linkedList();
         setCollections();
         mapCollections();
+        dequeExample();
     }
 
     public static void arrays() {
@@ -131,5 +132,44 @@ public class Collections {
         System.out.println("HashMap:\t" + hashMap);
         System.out.println("LinkedHashMap:\t" + linkedHashMap);
         System.out.println("TreeMap:\t" + treeMap);
+        System.out.println();
+    }
+
+    public static void dequeExample() {
+        System.out.println("Deque Example:");
+        System.out.println("Array Deque:");
+        System.out.println("Deque<String> deque = new ArrayDeque<>();");
+        Deque<String> deque = new ArrayDeque<>();
+
+        deque.add("John");
+        deque.add("Jane");
+        deque.add("Jack");
+        deque.add("Jill");
+        deque.add("Joe");
+        System.out.println("deque.add(\"John\");");
+        System.out.println("deque.add(\"Jane\");");
+        System.out.println("deque.add(\"Jack\");");
+        System.out.println("deque.add(\"Jill\");\n");
+        System.out.println("deque.add(\"Joe\");");
+
+        System.out.println("Deque:\t" + deque);
+        System.out.println("deque.remove();\t" + deque.remove());
+        System.out.println("Deque:\t" + deque);
+        System.out.println("deque.removeFirst();\t" + deque.removeFirst());
+        System.out.println("Deque:\t" + deque);
+        System.out.println("deque.removeLast();\t" + deque.removeLast());
+        System.out.println("Deque:\t" + deque);
+        System.out.println("deque.getFirst();\t" + deque.getFirst());
+        System.out.println("deque.getLast();\t" + deque.getLast());
+        System.out.println("deque.peek();\t" + deque.peek());
+        System.out.println("deque.peekFirst();\t" + deque.peekFirst());
+        System.out.println("deque.peekLast();\t" + deque.peekLast());
+        System.out.println("deque.poll();\t" + deque.poll());
+        System.out.println("deque.pollFirst();\t" + deque.pollFirst());
+        System.out.println("deque.pollLast();\t" + deque.pollLast());
+        System.out.println("deque.offer(\"John\");\t" + deque.offer("John"));
+        System.out.println("deque.offerFirst(\"Jane\");\t" + deque.offerFirst("Jane"));
+        System.out.println("deque.offerLast(\"Jack\");\t" + deque.offerLast("Jack"));
+        System.out.println("Deque:\t" + deque);
     }
 }
