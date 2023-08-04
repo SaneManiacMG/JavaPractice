@@ -1,4 +1,4 @@
-package com.sane.maniac.mg.ExceptionHandling;
+package com.sane.maniac.mg.exceptionhandling;
 
 import java.io.IOException;
 
