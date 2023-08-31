@@ -1,5 +1,8 @@
 package com.sane.maniac.mg.datatypes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class DataTypes {
   public static void main(String[] args) {
     callEachMethod();
@@ -331,5 +334,14 @@ public abstract class DataTypes {
     stringDataType();
     stringBufferAndStringBuilder();
     dataInference();
+  }
+
+  public static void doubleWrapperClass() {
+    Double val = new Double(10.5);
+    System.out.println("Double Wrapper Class:");
+
+    System.out.println("Double val: " + val);
+
+    List<Double> listOfNumers = new ArrayList<>();
   }
 }
