@@ -3,7 +3,7 @@ package com.sane.maniac.mg.javaio;
 import java.io.FileWriter;
 import java.util.Scanner;
 
-public class writeToFile {
+public class WriteToFile {
 
   public static void main(String[] args) {
     String name = writeData();
