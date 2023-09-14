@@ -4,12 +4,17 @@ public class SimpleMultithreading {
     private static int sum = 0;
 
     public static void main(String[] args) {
+        // Create an array of numbers
         int[] numbers = { 1, 2, 3, 4, 5 };
-        int numOfThreads = 2;
 
+        // Create an array of threads
+        int numOfThreads = 2;
         Thread[] threads = new Thread[numOfThreads];
+
+        // Divide the array of numbers into chunks
         int chunkSize = numbers.length / numOfThreads;
 
+        // Create and start threads
         for (int i = 0; i < numOfThreads; i++) {
             int startIndex = i * chunkSize;
             int endIndex = (i == numOfThreads - 1) ? numbers.length : startIndex + chunkSize;
@@ -17,6 +22,7 @@ public class SimpleMultithreading {
             threads[i].start();
         }
 
+        // Wait for threads to finish
         for (Thread thread : threads) {
             try {
                 thread.join();
@@ -25,6 +31,7 @@ public class SimpleMultithreading {
             }
         }
 
+        // Print the result
         System.out.println("Sum: " + sum);
     }
 

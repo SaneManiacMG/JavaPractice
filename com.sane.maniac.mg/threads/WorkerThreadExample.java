@@ -55,8 +55,7 @@ class RunnableTask implements Runnable {
   @Override
   public void run() {
     System.out.println(
-      name + " is running on Thread: " + Thread.currentThread().getName()
-    );
+        name + " is running on Thread: " + Thread.currentThread().getName());
   }
 }
 
